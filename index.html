@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html>
+  <script>
+    function onVideoClicked(video) {
+      video.paused ? video.play() : video.pause();
+      var playButton = document.getElementById("play-btn");
+      if (playButton) {
+        playButton.hidden = !video.paused
+      }
+    }
+  </script>
   <head>
     <meta charset="utf-8">
     <title>Flat Habits for iOS</title>
@@ -10,17 +19,33 @@
   <body>
     <div class="header-div">
       <div class="promo-video-container">
-        <video class="promo-video"
-               height="auto"
-               poster="intro_thumbnail.jpg"
-               autoplay
-               loop
-               muted
-               playsinline>
-          <source src="intro.mp4" type="video/mp4"/>
-        </video>
-        <br/>
-        <br/>
+        <div class="videos">
+          <div class="video-wrap">
+            <video class="promo-video"
+                   onClick="onVideoClicked(this)"
+                   height="auto"
+                   poster="intro_thumbnail.jpg"
+                   loop
+                   muted
+                   playsinline>
+              <source src="intro.mp4" type="video/mp4"/>
+            </video>
+            <div id="play-btn" class="play-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                <circle
+                  style="fill:#848285;fill-opacity:0.90;fill-rule:evenodd;stroke-width:0"
+                  id="path40"
+                  cx="150"
+                  cy="150"
+                  r="150" />
+                <polygon
+                  points="218.79,155.84 119.22,94.34 119.22,217.34 "
+                  id="polygon30"
+                  style="fill:#ffffff" />
+              </svg>
+            </div>
+          </div>
+        </div>
         <a href="https://apps.apple.com/app/id1558358855">
           <img src="download-on-app-store.png"
                alt="today_no_filter.png"

@@ -20,7 +20,6 @@ html, body {
     height: 100%;
     margin: auto;
     max-width: 88ch;
-    /* background: pink; */
 }
 
 h1,h2,h3 {
@@ -34,14 +33,12 @@ h1,h2,h3 {
     box-sizing: border-box;
     overflow-x: hidden;
     overflow-y: hidden;
-    /* background: black; */
 }
 
 .promo-video-container {
     height: 100vh;
     display: table-cell;
     vertical-align: middle;
-    /* background:green; */
 }
 
 .promo-video {
@@ -69,4 +66,51 @@ a:hover {
 
 a:active {
     text-decoration: none;
+}
+
+/* Just a parent container for the videos */
+.videos {
+    margin: 20px auto;
+    max-width: 700px;
+}
+
+/* Play overlay */
+
+.video-wrap {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.video-wrap .placeholder {
+    max-width: 700px;
+    width: 100%;
+}
+
+/* SVG play button container */
+.video-wrap .play-btn {
+    position: absolute;
+    max-width: 700px;
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* Let video tag handle click events */
+    pointer-events: none;
+}
+
+.video-wrap .play-btn svg {
+    transition: all .2s ease;
+    fill: #aaaaaa;
+    /* Let video tag handle click events */
+    pointer-events: none;
+}
+
+@media screen and (max-width: 600px) {
+    .video-wrap .play-btn {
+        width: 60px;
+        height: 60px;
+    }
 }
