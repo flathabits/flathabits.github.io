@@ -2,11 +2,11 @@
 <html>
   <script>
     function onVideoClicked(video) {
-      video.paused ? video.play() : video.pause();
-      var playButton = document.getElementById("play-btn");
-      if (playButton) {
-        playButton.hidden = !video.paused
-      }
+        video.paused ? video.play() : video.pause();
+        var playButton = document.getElementById("play-btn");
+        if (playButton) {
+            playButton.hidden = !video.paused
+        }
     }
   </script>
   <head>
@@ -20,6 +20,23 @@
     <div class="header-div">
       <div class="promo-video-container">
         <div class="videos">
+          <a href="https://twitter.com/flathabits">
+            <img src="twitter.png"
+                 alt="twitter.png"
+                 style="max-width: 3ch; padding-right: 3ch;"/>
+          </a>
+          <a href="https://reddit.com/r/flathabits">
+            <img src="reddit.png"
+                 alt="reddit.png"
+                 style="max-width: 3ch; padding-right: 3ch;"/>
+          </a>
+          <a href="https://apps.apple.com/app/id1558358855">
+            <img src="app-store.png"
+                 alt="app-store.png"
+                 style="max-width: 3ch;"/>
+          </a>
+          <br/>
+          <br/>
           <div class="video-wrap">
             <video class="promo-video"
                    onClick="onVideoClicked(this)"
@@ -46,10 +63,11 @@
             </div>
           </div>
         </div>
+        <br/>
         <a href="https://apps.apple.com/app/id1558358855">
           <img src="download-on-app-store.png"
                alt="today_no_filter.png"
-               style="max-width: 13ch;">
+               style="max-width: 13ch;"/>
         </a>
         <br/>
         <br/>
@@ -95,5 +113,9 @@
     <br/>
     <br/>
     If you joined TestFlight as a beta tester, you likely gave your email address. If you'd like your email removed, just ask. Note that TestFlight has its own <a href="https://www.apple.com/legal/internet-services/itunes/testflight/sren/terms.html">Terms Of Service</a>.
+    <br/>
+    <br/>
+    <div style="text-align: center; font-size: small;">Twitter, Reddit, and App Store icon by <a href="https://streamlinehq.com">Streamline</a>.</div>
+    <br/>
   </body>
 </html>
